@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    internal class Facturador
+    public class Facturador
     {
+        public int Id { get; set; }
+        public DateTime Fecha { get; set; }
+        public int MyProperty { get; set; }
     }
 }
