@@ -86,6 +86,7 @@
             this.CancelarButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.CancelarButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.CancelarButton.UseVisualStyleBackColor = true;
+            this.CancelarButton.Click += new System.EventHandler(this.CancelarButton_Click);
             // 
             // AceptarButton
             // 

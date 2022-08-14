@@ -22,9 +22,16 @@ namespace ProyectoLenguajeI
         Usuario user;
         string _nombreUsuario = "DEUNA";
         string _password = "1234";
+        int contador = 0;
 
         private void AceptarButton_Click(object sender, EventArgs e)
         {
+            contador ++;
+            if (contador == 3)
+            {
+                MessageBox.Show("Tiene tres intentos fallidos", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.Close();
+            }
             if ( UsuarioTextBox.Text == string.Empty)
             {
                 errorProvider1.SetError(UsuarioTextBox, "Ingrese el nombre de usuario.");
@@ -53,6 +60,11 @@ namespace ProyectoLenguajeI
             {
                 MessageBox.Show("Datos de usuario incorrectos", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void CancelarButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
