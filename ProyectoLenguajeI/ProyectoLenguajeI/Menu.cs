@@ -28,30 +28,85 @@ namespace ProyectoLenguajeI
 
         private void ListaUsuariosToolStripButton_Click(object sender, EventArgs e)
         {
-            formularioUsuarios = new Usuarios();
-            formularioUsuarios.MdiParent = this;
-            formularioUsuarios.Show();
+            if (formularioUsuarios == null)
+            {
+                formularioUsuarios = new Usuarios();
+                formularioUsuarios.MdiParent = this;
+                formularioUsuarios.FormClosed += FormularioUsuarios_FormClosed;
+                formularioUsuarios.Show();
+            }
+            else
+            {
+                formularioUsuarios.Activate();
+            }
+            
+        }
+
+        private void FormularioUsuarios_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            formularioUsuarios= null;
         }
 
         private void ClientesToolStripButton_Click(object sender, EventArgs e)
         {
-            formularioClientes = new Clientes();
-            formularioClientes.MdiParent = this;
-            formularioClientes.Show();
+            if (formularioClientes == null)
+            {
+                formularioClientes = new Clientes();
+                formularioClientes.MdiParent = this;
+                formularioClientes.FormClosed += FormularioClientes_FormClosed;
+                formularioClientes.Show();
+            }
+            else
+            {
+                formularioClientes.Activate();
+            }
+            
+        }
+
+        private void FormularioClientes_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            formularioClientes =null;
         }
 
         private void ProductosToolStripButton_Click(object sender, EventArgs e)
         {
-            formularioProductos = new Productos();
-            formularioProductos.MdiParent = this;
-            formularioProductos.Show();
+            if (formularioProductos == null)
+            {
+                formularioProductos = new Productos();
+                formularioProductos.MdiParent = this;
+                formularioProductos.FormClosed += FormularioProductos_FormClosed;
+                formularioProductos.Show();
+            }
+            else
+            {
+                formularioProductos.Activate();
+            }
+            
+        }
+
+        private void FormularioProductos_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            formularioProductos = null;
         }
 
         private void GenerarFacturaToolStripButton_Click(object sender, EventArgs e)
         {
-            formularioFactura = new Facturacion();
-            formularioFactura.MdiParent = this;
-            formularioFactura.Show();
+            if (formularioFactura == null)
+            {
+                formularioFactura = new Facturacion();
+                formularioFactura.MdiParent = this;
+                formularioFactura.FormClosed += FormularioFactura_FormClosed;
+                formularioFactura.Show();
+            }
+            else
+            {
+                formularioFactura.Activate();
+            }
+        }
+
+        private void FormularioFactura_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            formularioFactura= null;
         }
     }
 }

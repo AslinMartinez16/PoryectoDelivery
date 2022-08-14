@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Productos));
             this.PrecioTextBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -42,13 +43,17 @@
             this.CancelarButton = new System.Windows.Forms.Button();
             this.ModificarButton = new System.Windows.Forms.Button();
             this.NuevoButton = new System.Windows.Forms.Button();
+            this.ProductosDataGridView = new System.Windows.Forms.DataGridView();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.ProductosDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // PrecioTextBox
             // 
             this.PrecioTextBox.Enabled = false;
             this.PrecioTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PrecioTextBox.Location = new System.Drawing.Point(125, 168);
+            this.PrecioTextBox.Location = new System.Drawing.Point(125, 137);
             this.PrecioTextBox.Name = "PrecioTextBox";
             this.PrecioTextBox.Size = new System.Drawing.Size(442, 22);
             this.PrecioTextBox.TabIndex = 39;
@@ -57,7 +62,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(35, 171);
+            this.label4.Location = new System.Drawing.Point(35, 140);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(49, 16);
             this.label4.TabIndex = 38;
@@ -67,7 +72,7 @@
             // 
             this.ExistenciaTextBox.Enabled = false;
             this.ExistenciaTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ExistenciaTextBox.Location = new System.Drawing.Point(125, 122);
+            this.ExistenciaTextBox.Location = new System.Drawing.Point(125, 100);
             this.ExistenciaTextBox.Name = "ExistenciaTextBox";
             this.ExistenciaTextBox.Size = new System.Drawing.Size(442, 22);
             this.ExistenciaTextBox.TabIndex = 37;
@@ -76,7 +81,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(35, 125);
+            this.label3.Location = new System.Drawing.Point(35, 103);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(71, 16);
             this.label3.TabIndex = 36;
@@ -86,7 +91,7 @@
             // 
             this.NombreTextBox.Enabled = false;
             this.NombreTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NombreTextBox.Location = new System.Drawing.Point(125, 76);
+            this.NombreTextBox.Location = new System.Drawing.Point(125, 58);
             this.NombreTextBox.Name = "NombreTextBox";
             this.NombreTextBox.Size = new System.Drawing.Size(442, 22);
             this.NombreTextBox.TabIndex = 35;
@@ -95,7 +100,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(35, 79);
+            this.label2.Location = new System.Drawing.Point(35, 61);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(59, 16);
             this.label2.TabIndex = 34;
@@ -105,7 +110,7 @@
             // 
             this.CodigoTextBox.Enabled = false;
             this.CodigoTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CodigoTextBox.Location = new System.Drawing.Point(125, 35);
+            this.CodigoTextBox.Location = new System.Drawing.Point(125, 21);
             this.CodigoTextBox.Name = "CodigoTextBox";
             this.CodigoTextBox.Size = new System.Drawing.Size(442, 22);
             this.CodigoTextBox.TabIndex = 33;
@@ -114,7 +119,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(35, 38);
+            this.label1.Location = new System.Drawing.Point(35, 24);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(54, 16);
             this.label1.TabIndex = 32;
@@ -125,7 +130,7 @@
             this.EliminarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EliminarButton.Image = global::ProyectoLenguajeI.Properties.Resources.basura;
             this.EliminarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.EliminarButton.Location = new System.Drawing.Point(654, 227);
+            this.EliminarButton.Location = new System.Drawing.Point(654, 185);
             this.EliminarButton.Name = "EliminarButton";
             this.EliminarButton.Size = new System.Drawing.Size(148, 52);
             this.EliminarButton.TabIndex = 46;
@@ -138,20 +143,21 @@
             this.GuardarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GuardarButton.Image = global::ProyectoLenguajeI.Properties.Resources.salvar;
             this.GuardarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.GuardarButton.Location = new System.Drawing.Point(500, 227);
+            this.GuardarButton.Location = new System.Drawing.Point(500, 185);
             this.GuardarButton.Name = "GuardarButton";
             this.GuardarButton.Size = new System.Drawing.Size(148, 52);
             this.GuardarButton.TabIndex = 45;
             this.GuardarButton.Text = "Guardar";
             this.GuardarButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.GuardarButton.UseVisualStyleBackColor = true;
+            this.GuardarButton.Click += new System.EventHandler(this.GuardarButton_Click);
             // 
             // CancelarButton
             // 
             this.CancelarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CancelarButton.Image = global::ProyectoLenguajeI.Properties.Resources.cancelar;
             this.CancelarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.CancelarButton.Location = new System.Drawing.Point(346, 227);
+            this.CancelarButton.Location = new System.Drawing.Point(346, 185);
             this.CancelarButton.Name = "CancelarButton";
             this.CancelarButton.Size = new System.Drawing.Size(148, 52);
             this.CancelarButton.TabIndex = 44;
@@ -165,20 +171,21 @@
             this.ModificarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ModificarButton.Image = global::ProyectoLenguajeI.Properties.Resources.editar;
             this.ModificarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.ModificarButton.Location = new System.Drawing.Point(192, 227);
+            this.ModificarButton.Location = new System.Drawing.Point(192, 185);
             this.ModificarButton.Name = "ModificarButton";
             this.ModificarButton.Size = new System.Drawing.Size(148, 52);
             this.ModificarButton.TabIndex = 43;
             this.ModificarButton.Text = "Modificar";
             this.ModificarButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ModificarButton.UseVisualStyleBackColor = true;
+            this.ModificarButton.Click += new System.EventHandler(this.ModificarButton_Click);
             // 
             // NuevoButton
             // 
             this.NuevoButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NuevoButton.Image = global::ProyectoLenguajeI.Properties.Resources._3018582_buy_cart_checkout_products_purchase_icon;
             this.NuevoButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.NuevoButton.Location = new System.Drawing.Point(38, 227);
+            this.NuevoButton.Location = new System.Drawing.Point(38, 185);
             this.NuevoButton.Name = "NuevoButton";
             this.NuevoButton.Size = new System.Drawing.Size(148, 52);
             this.NuevoButton.TabIndex = 42;
@@ -187,11 +194,24 @@
             this.NuevoButton.UseVisualStyleBackColor = true;
             this.NuevoButton.Click += new System.EventHandler(this.NuevoButton_Click);
             // 
+            // ProductosDataGridView
+            // 
+            this.ProductosDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ProductosDataGridView.Location = new System.Drawing.Point(3, 255);
+            this.ProductosDataGridView.Name = "ProductosDataGridView";
+            this.ProductosDataGridView.Size = new System.Drawing.Size(832, 183);
+            this.ProductosDataGridView.TabIndex = 47;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // Productos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(859, 533);
+            this.ClientSize = new System.Drawing.Size(841, 440);
+            this.Controls.Add(this.ProductosDataGridView);
             this.Controls.Add(this.EliminarButton);
             this.Controls.Add(this.GuardarButton);
             this.Controls.Add(this.CancelarButton);
@@ -207,9 +227,12 @@
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Productos";
             this.Text = "Productos";
+            this.Load += new System.EventHandler(this.Productos_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.ProductosDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -230,5 +253,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox CodigoTextBox;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView ProductosDataGridView;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
