@@ -9,11 +9,12 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entidades;
 
+
 namespace ProyectoLenguajeI
 {
-    public partial class Usuarios : Form
+    public partial class Clientes : Form
     {
-        public Usuarios()
+        public Clientes()
         {
             InitializeComponent();
         }
@@ -27,17 +28,17 @@ namespace ProyectoLenguajeI
         {
             CodigoTextBox.Enabled = true;
             NombreTextBox.Enabled = true;
-            ClaveTextBox.Enabled = true;
+            DireccionTextBox.Enabled = true;
             CorreoTextBox.Enabled = true;
             TelefonoTextBox.Enabled = true;
-        }
 
+        }
 
         private void LimpiarControles()
         {
             CodigoTextBox.Clear();
             NombreTextBox.Clear();
-            ClaveTextBox.Clear();
+            DireccionTextBox.Clear();
             CorreoTextBox.Clear();
             TelefonoTextBox.Clear();
         }
@@ -46,7 +47,7 @@ namespace ProyectoLenguajeI
         {
             CodigoTextBox.Enabled = false;
             NombreTextBox.Enabled = false;
-            ClaveTextBox.Enabled = false;
+            DireccionTextBox.Enabled = false;
             CorreoTextBox.Enabled = false;
             TelefonoTextBox.Enabled = false;
         }
@@ -56,7 +57,5 @@ namespace ProyectoLenguajeI
             LimpiarControles();
             DeshabilitarControles();
         }
-
-
     }
 }
