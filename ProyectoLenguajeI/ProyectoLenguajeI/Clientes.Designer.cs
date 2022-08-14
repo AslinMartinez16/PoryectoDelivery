@@ -53,11 +53,13 @@
             // 
             // ClientesDataGridView
             // 
+            this.ClientesDataGridView.AllowUserToAddRows = false;
+            this.ClientesDataGridView.AllowUserToDeleteRows = false;
             this.ClientesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ClientesDataGridView.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.ClientesDataGridView.Location = new System.Drawing.Point(0, 310);
+            this.ClientesDataGridView.Location = new System.Drawing.Point(1, 262);
             this.ClientesDataGridView.Name = "ClientesDataGridView";
-            this.ClientesDataGridView.Size = new System.Drawing.Size(859, 225);
+            this.ClientesDataGridView.ReadOnly = true;
+            this.ClientesDataGridView.Size = new System.Drawing.Size(834, 170);
             this.ClientesDataGridView.TabIndex = 30;
             // 
             // GuardarButton
@@ -65,7 +67,7 @@
             this.GuardarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GuardarButton.Image = global::ProyectoLenguajeI.Properties.Resources.salvar;
             this.GuardarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.GuardarButton.Location = new System.Drawing.Point(496, 235);
+            this.GuardarButton.Location = new System.Drawing.Point(496, 196);
             this.GuardarButton.Name = "GuardarButton";
             this.GuardarButton.Size = new System.Drawing.Size(148, 52);
             this.GuardarButton.TabIndex = 29;
@@ -79,7 +81,7 @@
             this.CancelarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CancelarButton.Image = global::ProyectoLenguajeI.Properties.Resources.cancelar;
             this.CancelarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.CancelarButton.Location = new System.Drawing.Point(342, 235);
+            this.CancelarButton.Location = new System.Drawing.Point(342, 196);
             this.CancelarButton.Name = "CancelarButton";
             this.CancelarButton.Size = new System.Drawing.Size(148, 52);
             this.CancelarButton.TabIndex = 28;
@@ -93,7 +95,7 @@
             this.ModificarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ModificarButton.Image = global::ProyectoLenguajeI.Properties.Resources.editar;
             this.ModificarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.ModificarButton.Location = new System.Drawing.Point(188, 235);
+            this.ModificarButton.Location = new System.Drawing.Point(188, 196);
             this.ModificarButton.Name = "ModificarButton";
             this.ModificarButton.Size = new System.Drawing.Size(148, 52);
             this.ModificarButton.TabIndex = 27;
@@ -107,7 +109,7 @@
             this.NuevoButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NuevoButton.Image = global::ProyectoLenguajeI.Properties.Resources.nuevo_usuario;
             this.NuevoButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.NuevoButton.Location = new System.Drawing.Point(34, 235);
+            this.NuevoButton.Location = new System.Drawing.Point(34, 196);
             this.NuevoButton.Name = "NuevoButton";
             this.NuevoButton.Size = new System.Drawing.Size(148, 52);
             this.NuevoButton.TabIndex = 26;
@@ -120,7 +122,7 @@
             // 
             this.TelefonoTextBox.Enabled = false;
             this.TelefonoTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TelefonoTextBox.Location = new System.Drawing.Point(121, 195);
+            this.TelefonoTextBox.Location = new System.Drawing.Point(121, 150);
             this.TelefonoTextBox.Name = "TelefonoTextBox";
             this.TelefonoTextBox.Size = new System.Drawing.Size(442, 22);
             this.TelefonoTextBox.TabIndex = 25;
@@ -129,7 +131,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(31, 198);
+            this.label5.Location = new System.Drawing.Point(31, 153);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(64, 16);
             this.label5.TabIndex = 24;
@@ -139,7 +141,7 @@
             // 
             this.CorreoTextBox.Enabled = false;
             this.CorreoTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CorreoTextBox.Location = new System.Drawing.Point(121, 147);
+            this.CorreoTextBox.Location = new System.Drawing.Point(121, 116);
             this.CorreoTextBox.Name = "CorreoTextBox";
             this.CorreoTextBox.Size = new System.Drawing.Size(442, 22);
             this.CorreoTextBox.TabIndex = 23;
@@ -148,7 +150,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(31, 150);
+            this.label4.Location = new System.Drawing.Point(31, 119);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(51, 16);
             this.label4.TabIndex = 22;
@@ -158,7 +160,7 @@
             // 
             this.DireccionTextBox.Enabled = false;
             this.DireccionTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DireccionTextBox.Location = new System.Drawing.Point(121, 101);
+            this.DireccionTextBox.Location = new System.Drawing.Point(121, 82);
             this.DireccionTextBox.Name = "DireccionTextBox";
             this.DireccionTextBox.Size = new System.Drawing.Size(442, 22);
             this.DireccionTextBox.TabIndex = 21;
@@ -167,7 +169,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(31, 104);
+            this.label3.Location = new System.Drawing.Point(31, 85);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(67, 16);
             this.label3.TabIndex = 20;
@@ -177,7 +179,7 @@
             // 
             this.NombreTextBox.Enabled = false;
             this.NombreTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NombreTextBox.Location = new System.Drawing.Point(121, 55);
+            this.NombreTextBox.Location = new System.Drawing.Point(121, 48);
             this.NombreTextBox.Name = "NombreTextBox";
             this.NombreTextBox.Size = new System.Drawing.Size(442, 22);
             this.NombreTextBox.TabIndex = 19;
@@ -186,7 +188,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(31, 58);
+            this.label2.Location = new System.Drawing.Point(31, 51);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(59, 16);
             this.label2.TabIndex = 18;
@@ -196,7 +198,7 @@
             // 
             this.CodigoTextBox.Enabled = false;
             this.CodigoTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CodigoTextBox.Location = new System.Drawing.Point(121, 14);
+            this.CodigoTextBox.Location = new System.Drawing.Point(121, 13);
             this.CodigoTextBox.Name = "CodigoTextBox";
             this.CodigoTextBox.Size = new System.Drawing.Size(442, 22);
             this.CodigoTextBox.TabIndex = 17;
@@ -205,7 +207,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(31, 17);
+            this.label1.Location = new System.Drawing.Point(31, 16);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(54, 16);
             this.label1.TabIndex = 16;
@@ -216,7 +218,7 @@
             this.EliminarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EliminarButton.Image = global::ProyectoLenguajeI.Properties.Resources.basura;
             this.EliminarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.EliminarButton.Location = new System.Drawing.Point(650, 235);
+            this.EliminarButton.Location = new System.Drawing.Point(650, 196);
             this.EliminarButton.Name = "EliminarButton";
             this.EliminarButton.Size = new System.Drawing.Size(148, 52);
             this.EliminarButton.TabIndex = 31;
@@ -233,7 +235,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(859, 535);
+            this.ClientSize = new System.Drawing.Size(838, 437);
             this.Controls.Add(this.EliminarButton);
             this.Controls.Add(this.ClientesDataGridView);
             this.Controls.Add(this.GuardarButton);

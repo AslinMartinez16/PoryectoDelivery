@@ -162,6 +162,10 @@ namespace ProyectoLenguajeI
                     }
                 }
             }
+            else
+            {
+                MessageBox.Show("Debe seleccionar un registro", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
             ListarClientes();
         }
     }
