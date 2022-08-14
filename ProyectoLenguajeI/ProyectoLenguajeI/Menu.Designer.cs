@@ -86,7 +86,7 @@
             this.ribbonControlAdv1.QuickPanelImageLayout = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ribbonControlAdv1.RibbonHeaderImage = Syncfusion.Windows.Forms.Tools.RibbonHeaderImage.None;
             this.ribbonControlAdv1.RibbonStyle = Syncfusion.Windows.Forms.Tools.RibbonStyle.Office2016;
-            this.ribbonControlAdv1.SelectedTab = this.toolStripTabItem3;
+            this.ribbonControlAdv1.SelectedTab = this.toolStripTabItem4;
             this.ribbonControlAdv1.ShowRibbonDisplayOptionButton = true;
             this.ribbonControlAdv1.Size = new System.Drawing.Size(800, 143);
             this.ribbonControlAdv1.SystemText.QuickAccessDialogDropDownName = "Start menu";
@@ -108,7 +108,7 @@
             this.toolStripTabItem1.Panel.TabIndex = 2;
             this.toolStripTabItem1.Panel.Text = "Opciones";
             this.toolStripTabItem1.Position = 0;
-            this.toolStripTabItem1.Size = new System.Drawing.Size(80, 30);
+            this.toolStripTabItem1.Size = new System.Drawing.Size(70, 23);
             this.toolStripTabItem1.Tag = "1";
             this.toolStripTabItem1.Text = "Opciones";
             // 
@@ -141,7 +141,7 @@
             this.toolStripTabItem2.Panel.TabIndex = 3;
             this.toolStripTabItem2.Panel.Text = "Usuarios";
             this.toolStripTabItem2.Position = 1;
-            this.toolStripTabItem2.Size = new System.Drawing.Size(76, 30);
+            this.toolStripTabItem2.Size = new System.Drawing.Size(66, 23);
             this.toolStripTabItem2.Tag = "2";
             this.toolStripTabItem2.Text = "Usuarios";
             // 
@@ -174,7 +174,7 @@
             this.toolStripTabItem3.Panel.TabIndex = 4;
             this.toolStripTabItem3.Panel.Text = "Clientes";
             this.toolStripTabItem3.Position = 2;
-            this.toolStripTabItem3.Size = new System.Drawing.Size(71, 30);
+            this.toolStripTabItem3.Size = new System.Drawing.Size(61, 23);
             this.toolStripTabItem3.Tag = "3";
             this.toolStripTabItem3.Text = "Clientes";
             // 
@@ -192,7 +192,7 @@
             this.toolStripEx3.Office12Mode = false;
             this.toolStripEx3.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.toolStripEx3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.toolStripEx3.Size = new System.Drawing.Size(161, 77);
+            this.toolStripEx3.Size = new System.Drawing.Size(130, 77);
             this.toolStripEx3.TabIndex = 0;
             // 
             // toolStripTabItem4
@@ -207,7 +207,7 @@
             this.toolStripTabItem4.Panel.TabIndex = 5;
             this.toolStripTabItem4.Panel.Text = "Productos";
             this.toolStripTabItem4.Position = 3;
-            this.toolStripTabItem4.Size = new System.Drawing.Size(86, 30);
+            this.toolStripTabItem4.Size = new System.Drawing.Size(76, 23);
             this.toolStripTabItem4.Tag = "4";
             this.toolStripTabItem4.Text = "Productos";
             // 
@@ -225,7 +225,7 @@
             this.toolStripEx4.Office12Mode = false;
             this.toolStripEx4.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.toolStripEx4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.toolStripEx4.Size = new System.Drawing.Size(146, 77);
+            this.toolStripEx4.Size = new System.Drawing.Size(177, 77);
             this.toolStripEx4.TabIndex = 0;
             // 
             // toolStripTabItem5
@@ -240,7 +240,7 @@
             this.toolStripTabItem5.Panel.TabIndex = 6;
             this.toolStripTabItem5.Panel.Text = "Facturación";
             this.toolStripTabItem5.Position = 4;
-            this.toolStripTabItem5.Size = new System.Drawing.Size(94, 30);
+            this.toolStripTabItem5.Size = new System.Drawing.Size(84, 23);
             this.toolStripTabItem5.Tag = "5";
             this.toolStripTabItem5.Text = "Facturación";
             // 
@@ -318,6 +318,7 @@
             this.ProductosToolStripButton.Size = new System.Drawing.Size(137, 60);
             this.ProductosToolStripButton.Text = "Lista de Productos";
             this.ProductosToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.ProductosToolStripButton.Click += new System.EventHandler(this.ProductosToolStripButton_Click);
             // 
             // GenerarFacturaToolStripButton
             // 

@@ -19,6 +19,7 @@ namespace ProyectoLenguajeI
         }
         Usuarios formularioUsuarios;
         Clientes formularioClientes;
+        Productos formularioProductos;
         private void SalirToolStripButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -36,6 +37,13 @@ namespace ProyectoLenguajeI
             formularioClientes = new Clientes();
             formularioClientes.MdiParent = this;
             formularioClientes.Show();
+        }
+
+        private void ProductosToolStripButton_Click(object sender, EventArgs e)
+        {
+            formularioProductos = new Productos();
+            formularioProductos.MdiParent = this;
+            formularioProductos.Show();
         }
     }
 }
