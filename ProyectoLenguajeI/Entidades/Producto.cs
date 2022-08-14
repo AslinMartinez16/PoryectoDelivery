@@ -13,6 +13,16 @@ namespace Entidades
         public int Existencia { get; set; }
         public decimal Precio { get; set; }
 
+        public Producto()
+        {
+        }
 
+        public Producto(string codigo, string nombre, int existencia, decimal precio)
+        {
+            Codigo = codigo;
+            Nombre = nombre;
+            Existencia = existencia;
+            Precio = precio;
+        }
     }
 }

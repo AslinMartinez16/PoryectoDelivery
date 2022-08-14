@@ -26,7 +26,6 @@ namespace ProyectoLenguajeI
         {
             CodigoTextBox.Enabled = true;
             NombreTextBox.Enabled = true;
-            DescripcionTextBox.Enabled = true;
             ExistenciaTextBox.Enabled = true;
             PrecioTextBox.Enabled = true;
 
@@ -36,7 +35,6 @@ namespace ProyectoLenguajeI
         {
             CodigoTextBox.Clear();
             NombreTextBox.Clear();
-            DescripcionTextBox.Clear();
             ExistenciaTextBox.Clear();
             PrecioTextBox.Clear();
         }
@@ -45,7 +43,6 @@ namespace ProyectoLenguajeI
         {
             CodigoTextBox.Enabled = false;
             NombreTextBox.Enabled = false;
-            DescripcionTextBox.Enabled = false;
             ExistenciaTextBox.Enabled = false;
             PrecioTextBox.Enabled = false;
         }
