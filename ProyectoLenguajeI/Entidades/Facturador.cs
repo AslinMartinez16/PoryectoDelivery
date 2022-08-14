@@ -10,6 +10,26 @@ namespace Entidades
     {
         public int Id { get; set; }
         public DateTime Fecha { get; set; }
-        public int MyProperty { get; set; }
+        public string Cliente { get; set; }
+        public decimal ISV { get; set; }
+        public decimal Descuento { get; set; }
+        public decimal SubTotal { get; set; }
+        public decimal Total { get; set; }
+
+        public Facturador()
+        {
+
+        }
+
+        public Facturador(int id, DateTime fecha, string cliente, decimal iSV, decimal descuento, decimal subTotal, decimal total)
+        {
+            Id = id;
+            Fecha = fecha;
+            Cliente = cliente;
+            ISV = iSV;
+            Descuento = descuento;
+            SubTotal = subTotal;
+            Total = total;
+        }
     }
 }
