@@ -137,6 +137,7 @@
             this.EliminarButton.Text = "Eliminar";
             this.EliminarButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.EliminarButton.UseVisualStyleBackColor = true;
+            this.EliminarButton.Click += new System.EventHandler(this.EliminarButton_Click);
             // 
             // GuardarButton
             // 
@@ -196,9 +197,12 @@
             // 
             // ProductosDataGridView
             // 
+            this.ProductosDataGridView.AllowUserToAddRows = false;
+            this.ProductosDataGridView.AllowUserToDeleteRows = false;
             this.ProductosDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ProductosDataGridView.Location = new System.Drawing.Point(3, 255);
             this.ProductosDataGridView.Name = "ProductosDataGridView";
+            this.ProductosDataGridView.ReadOnly = true;
             this.ProductosDataGridView.Size = new System.Drawing.Size(832, 183);
             this.ProductosDataGridView.TabIndex = 47;
             // 

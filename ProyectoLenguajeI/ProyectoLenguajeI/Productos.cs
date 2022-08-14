@@ -87,7 +87,7 @@ namespace ProyectoLenguajeI
             errorProvider1.Clear();
 
             producto = new Producto(CodigoTextBox.Text, NombreTextBox.Text,
-             Convert.ToInt32(ExistenciaTextBox.Text), Convert.ToDecimal(PrecioTextBox.Text));
+                    Convert.ToInt32(ExistenciaTextBox.Text), Convert.ToDecimal(PrecioTextBox.Text));
 
             if (operacion == "Nuevo")
             {
@@ -107,6 +107,7 @@ namespace ProyectoLenguajeI
                         item.Nombre = NombreTextBox.Text;
                         item.Existencia = Convert.ToInt32(ExistenciaTextBox.Text);
                         item.Precio = Convert.ToDecimal(PrecioTextBox.Text);
+                        break;
                     }
                 }
                 ListarProductos();
@@ -135,6 +136,26 @@ namespace ProyectoLenguajeI
             {
                 MessageBox.Show("Debe seleccionar un registro", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        private void EliminarButton_Click(object sender, EventArgs e)
+        {
+            if (ProductosDataGridView.SelectedRows.Count > 0)
+            {
+                foreach (var prod in listaProductos)
+                {
+                    if (prod.Codigo == ProductosDataGridView.CurrentRow.Cells["Codigo"].Value.ToString())
+                    {
+                        listaProductos.Remove(prod);
+                        break;
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Debe seleccionar un registro", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            ListarProductos();
         }
     }
 }
