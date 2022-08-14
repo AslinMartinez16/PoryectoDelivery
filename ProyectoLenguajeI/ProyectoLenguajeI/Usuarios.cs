@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace ProyectoLenguajeI
 {
-    public partial class Menu : Form
+    public partial class Usuarios : Form
     {
-        public Menu()
+        public Usuarios()
         {
             InitializeComponent();
-        }
-
-        private void SalirToolStripButton_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
         }
     }
 }
