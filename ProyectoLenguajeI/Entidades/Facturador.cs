@@ -11,7 +11,6 @@ namespace Entidades
         public int Id { get; set; }
         public DateTime Fecha { get; set; }
         public string Cliente { get; set; }
-        public decimal ISV { get; set; }
         public decimal Descuento { get; set; }
         public decimal SubTotal { get; set; }
         public decimal Total { get; set; }
@@ -21,12 +20,11 @@ namespace Entidades
 
         }
 
-        public Facturador(int id, DateTime fecha, string cliente, decimal iSV, decimal descuento, decimal subTotal, decimal total)
+        public Facturador(int id, DateTime fecha, string cliente, decimal descuento, decimal subTotal, decimal total)
         {
             Id = id;
             Fecha = fecha;
             Cliente = cliente;
-            ISV = iSV;
             Descuento = descuento;
             SubTotal = subTotal;
             Total = total;
