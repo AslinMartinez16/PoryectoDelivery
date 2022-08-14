@@ -63,6 +63,16 @@ namespace ProyectoLenguajeI.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _3018582_buy_cart_checkout_products_purchase_icon {
+            get {
+                object obj = ResourceManager.GetObject("3018582_buy_cart_checkout_products_purchase_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap aceptar {
             get {
                 object obj = ResourceManager.GetObject("aceptar", resourceCulture);

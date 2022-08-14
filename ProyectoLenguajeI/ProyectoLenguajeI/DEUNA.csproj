@@ -166,5 +166,8 @@
   <ItemGroup>
     <None Include="Resources\basura.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3018582_buy_cart_checkout_products_purchase_icon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
