@@ -140,6 +140,10 @@
     <None Include="Resources\boton-eliminar.png" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Datos\Datos.csproj">
+      <Project>{54652450-4CE4-497F-8DC2-D5AEE14142C5}</Project>
+      <Name>Datos</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Entidades\Entidades.csproj">
       <Project>{be138da0-615d-4c0e-b21f-eea64df7e2e4}</Project>
       <Name>Entidades</Name>

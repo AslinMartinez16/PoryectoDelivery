@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entidades;
-
+using Datos;
 
 namespace ProyectoLenguajeI
 {
@@ -19,7 +19,7 @@ namespace ProyectoLenguajeI
             InitializeComponent();
         }
 
-        Usuario user;
+        //Usuario user;
         string _nombreUsuario = "DEUNA";
         string _password = "1234";
         int contador = 0;
@@ -48,9 +48,12 @@ namespace ProyectoLenguajeI
                 return;
             }
             errorProvider1.Clear();
-            user = new Usuario(UsuarioTextBox.Text, PasswordTextBox.Text);
-            
-            if (user.Codigo.ToUpper() == _nombreUsuario && user.Clave == _password)
+            //user = new Usuario(UsuarioTextBox.Text, PasswordTextBox.Text);
+
+            UsuarioDatos userDatos = new UsuarioDatos();
+
+            bool usuarioValido = userDatos.ValidarLogin(UsuarioTextBox.Text, PasswordTextBox.Text);
+            if (usuarioValido)
             {
                 Menu miMenu = new Menu();
                 this.Hide();

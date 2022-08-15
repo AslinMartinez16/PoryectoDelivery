@@ -100,6 +100,7 @@
             this.ClaveTextBox.Location = new System.Drawing.Point(97, 92);
             this.ClaveTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.ClaveTextBox.Name = "ClaveTextBox";
+            this.ClaveTextBox.PasswordChar = '*';
             this.ClaveTextBox.Size = new System.Drawing.Size(354, 22);
             this.ClaveTextBox.TabIndex = 5;
             // 
