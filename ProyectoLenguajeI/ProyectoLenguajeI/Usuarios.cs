@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Datos;
 using Entidades;
 
 namespace ProyectoLenguajeI
@@ -22,17 +23,20 @@ namespace ProyectoLenguajeI
         BindingList<Usuario> listaUsuarios = new BindingList<Usuario>();
         Usuario user;
 
+        UsuarioDatos userDatos = new UsuarioDatos();
 
 
         private void ListarUsuarios()
         {
             UsuariosDataGridView.DataSource = null;
-            UsuariosDataGridView.DataSource = listaUsuarios;
+            //UsuariosDataGridView.DataSource = listaUsuarios//;
+            UsuariosDataGridView.DataSource = userDatos.DevolverTodos();
         }
         private void NuevoButton_Click(object sender, EventArgs e)
         {
             HabilitarControles();
             operacion = "Nuevo";
+            CodigoTextBox.Focus();
         }
 
         private void HabilitarControles()
@@ -103,28 +107,51 @@ namespace ProyectoLenguajeI
 
             if (operacion == "Nuevo")
             {
-                listaUsuarios.Add(user);
-                ListarUsuarios();
+                //listaUsuarios.Add(user);
+                bool inserto = userDatos.Nuevo(user);
+                if (inserto)
+                {
+                    ListarUsuarios();
 
-                LimpiarControles();
-                DeshabilitarControles();
+                    LimpiarControles();
+                    DeshabilitarControles();
+
+                    MessageBox.Show("Usuario creado exitosamente", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo guardar el usuario", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+                
 
             }
             else if (operacion == "Modificar")
             {
-                foreach (Usuario item in listaUsuarios)
+                //foreach (Usuario item in listaUsuarios)
+                //{
+                //    if (item.Codigo == CodigoTextBox.Text)
+                //    {
+                //        item.Nombre=NombreTextBox.Text;
+                //        item.Clave=ClaveTextBox.Text;
+                //        item.Correo = CorreoTextBox.Text;
+                //        item.Telefono = TelefonoTextBox.Text;
+                //    }
+                //}
+
+                bool modificar = userDatos.Actualizar(user);
+                if (modificar)
                 {
-                    if (item.Codigo == CodigoTextBox.Text)
-                    {
-                        item.Nombre=NombreTextBox.Text;
-                        item.Clave=ClaveTextBox.Text;
-                        item.Correo = CorreoTextBox.Text;
-                        item.Telefono = TelefonoTextBox.Text;
-                    }
+                    ListarUsuarios();
+                    LimpiarControles();
+                    DeshabilitarControles();
+                    MessageBox.Show("Usuario modificado exitosamente", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                ListarUsuarios();
-                LimpiarControles();
-                DeshabilitarControles();
+                else
+                {
+                    MessageBox.Show("No se pudo modificar el usuario", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
 
             }
         }
@@ -140,8 +167,8 @@ namespace ProyectoLenguajeI
                 CodigoTextBox.Text = UsuariosDataGridView.CurrentRow.Cells["Codigo"].Value.ToString();
                 NombreTextBox.Text = UsuariosDataGridView.CurrentRow.Cells["Nombre"].Value.ToString();
                 ClaveTextBox.Text = UsuariosDataGridView.CurrentRow.Cells["Clave"].Value.ToString();
-                CorreoTextBox.Text = UsuariosDataGridView.CurrentRow.Cells["Correo"].Value.ToString();
-                TelefonoTextBox.Text = UsuariosDataGridView.CurrentRow.Cells["Telefono"].Value.ToString();
+                CorreoTextBox.Text = UsuariosDataGridView.CurrentRow.Cells["Email"].Value.ToString();
+                //TelefonoTextBox.Text = UsuariosDataGridView.CurrentRow.Cells["Telefono"].Value.ToString();
 
 
             }
