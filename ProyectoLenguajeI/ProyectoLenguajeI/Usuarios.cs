@@ -182,20 +182,32 @@ namespace ProyectoLenguajeI
         {
             if (UsuariosDataGridView.SelectedRows.Count > 0)
             {
-                foreach (var user in listaUsuarios)
+                bool elimino = userDatos.Eliminar(UsuariosDataGridView.CurrentRow.Cells["Codigo"].Value.ToString());
+                if (elimino)
                 {
-                    if ( user.Codigo == UsuariosDataGridView.CurrentRow.Cells["Codigo"].Value.ToString())
-                    {
-                        listaUsuarios.Remove(user);
-                        break;
-                    }
+                    ListarUsuarios();
+                    MessageBox.Show("Usuario eliminado exitosamente", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
+                else
+                {
+                    MessageBox.Show("No se pudo eliminar el usuario", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                //foreach (var user in listaUsuarios)
+                //{
+                //    if ( user.Codigo == UsuariosDataGridView.CurrentRow.Cells["Codigo"].Value.ToString())
+                //    {
+                //        listaUsuarios.Remove(user);
+                //        break;
+                //    }
+                //}
             }
+
+
             else
             {
                 MessageBox.Show("Debe seleccionar un registro", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            ListarUsuarios();
+           
         }
     }
 }

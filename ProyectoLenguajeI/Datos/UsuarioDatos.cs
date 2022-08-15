@@ -105,10 +105,10 @@ namespace Datos
             }
             return actualizo;
         }
-        public bool Eliminar(Usuario usuario)
+        public bool Eliminar(string codigo)
         {
             bool elimino = false;
-            string sql = "DELETE FROM usuarios WHERE Codigo=@Codigo Nombre = @Nombre, Email=@Email, Clave=@Clave";
+            string sql = "DELETE FROM usuarios WHERE Codigo = @Codigo ";
 
             using (MySqlConnection _conexion = new MySqlConnection(CadenaConexion.Cadena))
             {
@@ -117,7 +117,7 @@ namespace Datos
                 using (MySqlCommand comando = new MySqlCommand(sql, _conexion))
                 {
                     comando.CommandType = System.Data.CommandType.Text;
-                    comando.Parameters.Add("@Codigo", MySqlDbType.VarChar, 30).Value = usuario.Codigo;
+                    comando.Parameters.Add("@Codigo", MySqlDbType.VarChar, 30).Value = codigo;
                     comando.ExecuteNonQuery();
                     elimino = true;
                 }
